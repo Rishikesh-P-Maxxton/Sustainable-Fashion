@@ -1,0 +1,171 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.brand-text {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 24px; /* Size of the brand text */
+    font-weight: 400; /* Light font weight */
+    color: #333; /* Brand text color */
+}
+.brand-text img {
+    max-width: 100%; /* Ensure the image scales down if necessary */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 100px; /* Set a maximum height if needed */
+    /* Add any other styling you might need */
+  }
+
+.navbar {
+    background: transparent; /* Transparent background */
+    padding: 0; /* Remove default padding */
+}
+
+.navbar-nav-wrapper {
+    display: flex;
+    justify-content: space-between; /* Space between nav items and login link */
+    align-items: center; /* Center align items vertically */
+    width: 100%; /* Full width of the container */
+}
+
+.navbar-nav {
+    display: flex; /* Flexbox for horizontal layout */
+    flex-direction: row;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    list-style: none; /* Remove default list style */
+}
+
+.nav-item {
+    margin: 0; /* Remove default margin */
+}
+
+.nav-link {
+    font-family: 'Arial', sans-serif; /* Minimal font */
+    font-weight: 300; /* Thin font weight */
+    color: #333; /* Rich text color */
+    font-size: 14px; /* Thin font size */
+    padding: 16px 20px; /* Consistent spacing around links */
+    text-decoration: none; /* Remove default underline */
+    position: relative; /* For absolute positioning of pseudo-elements */
+    background: none; /* Ensure no background color */
+    border: none; /* Ensure no border */
+}
+
+/* Underline effect */
+.nav-link::after {
+    content: ''; /* Empty content for pseudo-element */
+    display: block;
+    width: 0; /* Initial width of the underline */
+    height: 2px; /* Thickness of the underline */
+    background: #555; /* Color of the underline */
+    position: absolute;
+    left: 0;
+    bottom: 0; /* Position the underline at the bottom of the link */
+    transition: width 0.3s ease; /* Smooth transition effect */
+}
+
+/* Expand underline on hover */
+.nav-link:hover::after {
+    width: 100%; /* Full width underline on hover */
+}
+
+/* Style for the Login link */
+.login-link {
+    font-family: 'Arial', sans-serif; /* Same font as nav items */
+    font-weight: 300; /* Same font weight as nav items */
+    color: #395439; /* Darker sage green text color */
+    font-size: 14px; /* Same font size as nav items */
+    padding: 16px 20px; /* Consistent padding for the login link */
+    text-decoration: none; /* Remove default underline */
+    background: none; /* Ensure no background color */
+    border: none; /* Ensure no border */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Hover effect for the Login link */
+.login-link:hover {
+    color: #6c8e6f; /* Slightly lighter sage green on hover */
+}
+
+/* Underline effect for the Login link */
+.login-link::after {
+    content: ''; /* Empty content for pseudo-element */
+    display: block;
+    width: 0; /* Initial width of the underline */
+    height: 2px; /* Thickness of the underline */
+    background: #555; /* Color of the underline */
+    position: absolute;
+    left: 0;
+    bottom: 0; /* Position the underline at the bottom of the link */
+    transition: width 0.3s ease; /* Smooth transition effect */
+}
+
+/* Expand underline on hover for the Login link */
+.login-link:hover::after {
+    width: 100%; /* Full width underline on hover */
+}
+
+/* dropdown css*/
+/* Ensure Bootstrap dropdown functionality is not broken */
+.dropdown-menu {
+    background: transparent; /* Transparent background to match the navbar */
+    border: none; /* Remove default border */
+    box-shadow: none; /* Remove default shadow */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    position: absolute; /* Position relative to parent */
+    top: 100%; /* Position below the dropdown toggle */
+    left: 0; /* Align with the left edge of the parent */
+    display: none; /* Hide the menu by default */
+}
+
+/* Make dropdown menu hoverable */
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block; /* Show the dropdown menu on hover */
+}
+
+/* Style for dropdown items */
+.dropdown-item {
+    font-family: 'Arial', sans-serif; /* Same font as nav items */
+    font-weight: 300; /* Same font weight as nav items */
+    color: #333; /* Same text color as nav items */
+    font-size: 14px; /* Same font size as nav items */
+    padding: 16px 20px; /* Consistent padding for dropdown items */
+    text-decoration: none; /* Remove default underline */
+    display: block; /* Block display for dropdown items */
+    background: none; /* Ensure no background color */
+}
+
+/* Hover effect for dropdown items */
+.dropdown-item:hover {
+    background: #f8f9fa; /* Light background on hover */
+    color: #395439; /* Darker sage green text color on hover */
+}
+
+/* Divider styling */
+.dropdown-divider {
+    border-top: 1px solid #ddd; /* Light gray divider line */
+    margin: 0; /* Remove default margin */
+}
+
+/* Adjust the dropdown toggle to align with the navbar */
+.nav-link.dropdown-toggle::after {
+    display: none; /* Hide the default dropdown indicator */
+}
+
+/* Optional: Add transition for smoother appearance */
+.dropdown-menu {
+    transition: opacity 0.3s ease; /* Smooth transition for the dropdown menu */
+}
+
+/* Ensure dropdown menu positioning is correct */
+.dropdown-menu {
+    width: auto; /* Adjust width if necessary */
+}
+
+/* Ensure proper z-index for dropdown visibility */
+.nav-item.dropdown {
+    position: relative; /* Ensure dropdown menu is positioned correctly */
+}
