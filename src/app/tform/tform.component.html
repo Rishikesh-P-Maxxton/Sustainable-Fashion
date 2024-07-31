@@ -1,0 +1,61 @@
+<div class="container">
+    <div class="card txt-bold mb-3 bg-black text-white">
+      <form #f="ngForm" novalidate (ngSubmit)="save(f.value, f.form.valid)">
+        <!-- name -->
+        <div>
+          <label class="fw-bold mt-2">Name</label>
+          <input
+            type="text"
+            name="name"
+            [(ngModel)]="user.name"
+            #name="ngModel"
+            required
+            minlength="5"
+            class="form-control"
+          />
+          <small [hidden]="name.valid || (name.pristine && !f.submitted)">
+            Name is required (minimum 5 characters).
+          </small>
+        </div>
+  
+        <!-- address group -->
+        <div ngModelGroup="address">
+          <!-- street -->
+          <div>
+            <label class="fw-bold mt-2">Street</label>
+            <input
+              type="text"
+              name="street"
+              [(ngModel)]="user.address.street"
+              #street="ngModel"
+              required
+              class="form-control"
+            />
+            <small
+              [hidden]="street.valid || (street.pristine && !f.submitted)"
+              class="text-danger"
+            >
+              Street is required.
+            </small>
+          </div>
+  
+          <!-- postcode -->
+          <div>
+            <label class="fw-bold mt-2">Post code</label>
+            <input
+              type="text"
+              name="postcode"
+              [(ngModel)]="user.address.postcode"
+              class="form-control"
+            />
+          </div>
+  
+          <div class="d-flex justify-content-center mt-3">
+            <!-- Center the button -->
+            <button class="btn btn-success mb-3">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  
