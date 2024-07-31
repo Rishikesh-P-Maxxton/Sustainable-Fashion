@@ -135,7 +135,7 @@ body {
     padding: 16px 20px; /* Consistent padding for dropdown items */
     text-decoration: none; /* Remove default underline */
     display: block; /* Block display for dropdown items */
-    background: none; /* Ensure no background color */
+    background: white; /* Ensure no background color */
 }
 
 /* Hover effect for dropdown items */
