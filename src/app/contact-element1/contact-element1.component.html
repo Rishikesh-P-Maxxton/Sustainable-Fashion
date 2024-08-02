@@ -1,19 +1,19 @@
 <div class="container my-5">
   <div class="row">
-    <section class="jumbotron j1">
+    <section class="jumbotron con1">
       <h3 class="display-4 ">Contact Us</h3>
       <p class="lead">Choose your preferred method of contact to connect with our customer service team or find more information with our FAQs</p>
     </section>
   </div>
-  <div class="row g-3">
+  <div class="row g-3 con2">
     <!-- First Section: Call Us -->
     <div class="col-md-4">
       <div class="jumbotron custom-jumbotron">
         <h1 class="jumbotron-title">Call Us</h1>
         <p class="jumbotron-subtitle">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Monday To Saturday: 10am - 7pm 
         </p>
-        <button class="btn custom-btn">123-456-7890</button>
+        <button class="btn custom-btn" (click)="makeCall()" >123-456-7890</button>
       </div>
     </div>
     <!-- Second Section: Email Us -->
@@ -21,21 +21,21 @@
       <div class="jumbotron custom-jumbotron">
         <h1 class="jumbotron-title">Email Us</h1>
         <p class="jumbotron-subtitle">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Our client advisors will be delighted to answer your questions
         </p>
-        <button class="btn custom-btn">Email Us</button>
+        <button class="btn custom-btn" (click)="makemail()">Email Us</button>
       </div>
     </div>
     <!-- Third Section: Messages -->
     <div class="col-md-4">
       <div class="jumbotron custom-jumbotron">
-        <h1 class="jumbotron-title">Messages</h1>
+        <h1 class="jumbotron-title">Message Us</h1>
         <p class="jumbotron-subtitle">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Our Client Services. You can get in touch with our Assiociate.
         </p>
         <div class="d-flex flex-column align-items-center">
-          <button class="btn custom-btn mb-2">Message 1</button>
-          <button class="btn custom-btn">Message 2</button>
+          <button class="btn custom-btn mb-2">WhatsApp</button>
+          <button class="btn custom-btn">I Messages</button>
         </div>
       </div>
     </div>

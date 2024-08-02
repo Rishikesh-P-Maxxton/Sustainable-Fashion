@@ -60,3 +60,7 @@
   overflow: hidden;
   text-overflow: ellipsis; /* Handle overflow with ellipsis */
 }
+
+.cont{
+  margin-left: 4rem ;
+}
