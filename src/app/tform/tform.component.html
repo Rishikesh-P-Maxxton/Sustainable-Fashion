@@ -1,61 +1,87 @@
 <div class="container">
-    <div class="card txt-bold mb-3 bg-black text-white">
-      <form #f="ngForm" novalidate (ngSubmit)="save(f.value, f.form.valid)">
-        <!-- name -->
-        <div>
-          <label class="fw-bold mt-2">Name</label>
-          <input
-            type="text"
-            name="name"
-            [(ngModel)]="user.name"
-            #name="ngModel"
-            required
-            minlength="5"
-            class="form-control"
-          />
-          <small [hidden]="name.valid || (name.pristine && !f.submitted)">
-            Name is required (minimum 5 characters).
-          </small>
-        </div>
-  
-        <!-- address group -->
-        <div ngModelGroup="address">
-          <!-- street -->
-          <div>
-            <label class="fw-bold mt-2">Street</label>
+  <div class="jumbotron">
+    <p class="display-5">Sign Up!</p>
+  </div>
+  <div class="card  mb-3">
+    <form #f="ngForm" novalidate (ngSubmit)="save(f.value, f.form.valid)">
+      <div class="row">
+        <div class="col-md-5">
+          <!-- Name -->
+          <div class="form-group">
             <input
               type="text"
-              name="street"
-              [(ngModel)]="user.address.street"
-              #street="ngModel"
+              name="name"
+              [(ngModel)]="user.name"
+              #name="ngModel"
               required
+              minlength="5"
+              placeholder="Name (minimum 5 characters)"
               class="form-control"
             />
-            <small
-              [hidden]="street.valid || (street.pristine && !f.submitted)"
-              class="text-danger"
-            >
-              Street is required.
+            <small [hidden]="name.valid || (name.pristine && !f.submitted)" class="error-message">
+              Name is required (minimum 5 characters).
             </small>
           </div>
-  
-          <!-- postcode -->
-          <div>
-            <label class="fw-bold mt-2">Post code</label>
+
+          <!-- Email -->
+          <div class="form-group">
             <input
-              type="text"
-              name="postcode"
-              [(ngModel)]="user.address.postcode"
+              type="email"
+              name="email"
+              [(ngModel)]="user.email"
+              #email="ngModel"
+              required
+              email
+              placeholder="Email"
               class="form-control"
             />
+            <small [hidden]="email.valid || (email.pristine && !f.submitted)" class="error-message">
+              A valid email is required.
+            </small>
           </div>
-  
-          <div class="d-flex justify-content-center mt-3">
-            <!-- Center the button -->
-            <button class="btn btn-success mb-3">Submit</button>
+
+          <!-- Address Group -->
+          <div ngModelGroup="address">
+            <!-- Street -->
+            <div class="form-group">
+              <input
+                type="text"
+                name="street"
+                [(ngModel)]="user.address.street"
+                #street="ngModel"
+                required
+                placeholder="Street"
+                class="form-control"
+              />
+              <small [hidden]="street.valid || (street.pristine && !f.submitted)" class="error-message">
+                Street is required.
+              </small>
+            </div>
+
+            <!-- Postcode -->
+            <div class="form-group">
+              <input
+                type="text"
+                name="postcode"
+                [(ngModel)]="user.address.postcode"
+                placeholder="Post code"
+                class="form-control"
+              />
+            </div>
+
+            <!-- Submit Button -->
+            <div class="d-flex justify-content-start mt-3">
+              <button class="btn-submit mb-3" type="submit">Submit</button>
+            </div>
           </div>
         </div>
-      </form>
+      </div>
+    </form>
+
+    <!-- Display the form data in JSON format -->
+    <div class="form-output mt-3">
+      <h3 class="fw-bold">Form Data (JSON):</h3>
+      <pre>{{ f.value | json }}</pre>
     </div>
   </div>
-  
+</div>

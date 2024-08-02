@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule, RouterModule } from './app-routing.module';
@@ -28,6 +28,9 @@ import { VidBannerComponent } from './vid-banner/vid-banner.component';
 import { AboutPageComponent } from './about-page/about-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { RformComponent } from './rform/rform.component';
+import { SignupPageComponent } from './signup-page/signup-page.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+
 
 
 @NgModule({
@@ -51,7 +54,10 @@ import { RformComponent } from './rform/rform.component';
     VidBannerComponent,
     AboutPageComponent,
     LoginPageComponent,
-    RformComponent, 
+    RformComponent,
+    SignupPageComponent,
+    NotFoundComponent,
+   
     
     
   

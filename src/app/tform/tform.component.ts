@@ -13,6 +13,7 @@ export class TformComponent {
     // we will initialize our form here
     this.user = {
       name: '',
+      email: '',
       address: {
         street: '',
         postcode: '', // set default value to 8000
