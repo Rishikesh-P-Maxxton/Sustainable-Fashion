@@ -30,6 +30,7 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { RformComponent } from './rform/rform.component';
 import { SignupPageComponent } from './signup-page/signup-page.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { HomeElem2Component } from './home-elem2/home-elem2.component';
 
 
 
@@ -57,6 +58,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     RformComponent,
     SignupPageComponent,
     NotFoundComponent,
+    HomeElem2Component,
    
     
     

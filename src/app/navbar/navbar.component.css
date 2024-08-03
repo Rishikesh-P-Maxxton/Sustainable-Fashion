@@ -156,3 +156,9 @@ body {
     position: relative;
   }
   
+  .sticky-top-custom {
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0;
+    z-index: 1020; /* Ensure it is above other elements */
+  }
